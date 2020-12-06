@@ -24,7 +24,7 @@ $qrCode = $auth->createQRCode('Test-App', $secret);
 $code = $auth->getCode($secret);
 
 //check if the code is valid, instead of code you can also use your user input
-$valid = $ga->verifyCode($secret, $code, 2);
+$valid = $auth->verifyCode($secret, $code, 2);
 if ($valid) {
     echo 'Grant access';
 } else {
