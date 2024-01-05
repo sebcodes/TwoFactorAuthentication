@@ -7,7 +7,7 @@ use \Exception;
  * @category Sebcodes Project
  * @author Sebastian Kiefer (sebcodes)
  * @version 1.0
- * @copyright 2020 Sebastian Kiefer
+ * @copyright 2024 Sebastian Kiefer
  * @since 2020
  * @link https://sebcodes.de
  * @see https://github.com/sebcodes/TwoFactorAuthentication
@@ -174,7 +174,6 @@ class Authenticator
      */
     private function equalTiming(String $calculatedCode,String $userCode):bool
     {
-        // If the function exists, use it, otherwise continue
         if (function_exists('hash_equals')) {
             return hash_equals($calculatedCode, $userCode);
         }
